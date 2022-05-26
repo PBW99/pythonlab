@@ -44,9 +44,9 @@ def interactive():
                     'message': p.name}
         if p.default is not None:
             question['default'] = str(p.default)
-
         option_questions.append(question)
     option_answers = prompt(option_questions)
+
     call_args = ["python", sys.argv[0], command_answers["command"]]
     for p in command_func.params:
         call_args.append(f'--{p.name}')
