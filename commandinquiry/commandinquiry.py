@@ -37,9 +37,6 @@ def interactive():
          'choices': root.commands})
     command_func = globals()[command_answers["command"]]
 
-    para = create.params[0]
-    para.type
-
     option_questions = []
     for p in command_func.params:
         question = {'type': 'input',
